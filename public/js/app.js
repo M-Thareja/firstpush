@@ -1,5 +1,3 @@
-console.log('Client side javascript file is loaded!')
-
 // fetch('http://localhost:3000/weather?address=hawaii').then((response)=>{
 //     // if(error){
 //     //    return console.log("Can't connect to the server.")
