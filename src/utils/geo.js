@@ -19,7 +19,9 @@ const forecast = (lat, lon, callback)=>{
             callback(undefined, {
                 temp : response.body.current.temperature,
                 region : response.body.location.region,
-                desc : response.body.current.weather_descriptions
+                desc : response.body.current.weather_descriptions,
+                country: response.body.location.country,
+                weatherimg: response.body.current.weather_icons
 
             })
         }

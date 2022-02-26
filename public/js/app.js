@@ -19,6 +19,7 @@ const form = document.querySelector('form');
 const inputdata = document.querySelector('input');
 const message1 = document.querySelector('#message1')
 const message2= document.querySelector('#message2')
+const image1 = document.querySelector('#image1')
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -35,8 +36,9 @@ form.addEventListener('submit',(e)=>{
         }
         else{
             console.log(data.temp)
-            message1.textContent = `The Temperature of ${location} is ${data.temp} celcius.`
+            message1.textContent = `The Temperature of ${data.region}, ${data.country} is ${data.temp} celcius.`
             message2.textContent = `It can be ${data.discription}`
+            image1.src = data.weatehrimg
         }
     })
 })

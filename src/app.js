@@ -22,14 +22,14 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        name: 'Andrew Mead'
+        name: 'Thareja'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
-        name: 'Andrew Mead'
+        name: 'Thareja'
     })
 })
 
@@ -37,7 +37,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         helpText: 'This is some helpful text.',
         title: 'Help',
-        name: 'Andrew Mead'
+        name: 'Thareja'
     })
 })
 
@@ -63,10 +63,12 @@ app.get('/weather', (req, res) => {
                 else{
                     res.send({
                         temp: data.temp,
-                        region: data.reagion,
+                        region: data.region,
                         discription: data.desc[0],
                         latitude : meme.lat,
-                        longitude: meme.lon
+                        longitude: meme.lon,
+                        country: data.country,
+                        weatehrimg: data.weatherimg
                     })
                 }
             })
